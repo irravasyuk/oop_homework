@@ -1,67 +1,36 @@
-# Завдання 1
-# Реалізуйте клас «Людина». Збережіть у класі: ПІБ,
-# дату народження, контактний телефон, місто, країну,
-# домашню адресу. Реалізуйте методи класу для введення-виведення даних та інших операцій.
+# Завдання 2
+# Створіть клас «Місто». Збережіть у класі: назву міста,
+# назву регіону, назву країни, кількість жителів у місті,
+# поштовий індекс міста, телефонний код міста. Реалізуйте
+# методи класу для введення-виведення даних та інших
+# операцій.
 
-class Human:
-    def __init__(self, full_name, date_of_birth, phone_number, city, country, home_address):
-        self.full_name = full_name
-        self.date_of_birth = date_of_birth
-        self.phone_number = phone_number
-        self.city = city
+class City:
+    def __init__(self, name, region, country, population, postal_code, phone_code):
+        self.name = name
+        self.region = region
         self.country = country
-        self.home_address = home_address
+        self.population = population
+        self.postal_code = postal_code
+        self.phone_code = phone_code
 
     def input_data(self):
-        self.full_name = input("Введіть піб: ")
-        self.date_of_birth = input("Введіть дату народження: ")
-        self.phone_number = input("Введіть контактний телефон: ")
-        self.city = input("Введіть місто: ")
-        self.country = input("Введіть країну: ")
-        self.home_address = input("Введіть домашню адресу: ")
+        self.name = input("Введіть назву міста: ")
+        self.region = input("Введіть назву регіону: ")
+        self.country = input("Введіть назву країни: ")
+        self.population = input("Введіть кількість жителів у місті: ")
+        self.postal_code = input("Введіть поштовий індекс міста: ")
+        self.phone_code = input("Введіть телефонний код міста: ")
 
     def display(self):
-        print("піб:", self.full_name)
-        print("дата народження:", self.date_of_birth)
-        print("контактний телефон:", self.phone_number)
-        print("місто:", self.city)
-        print("країна:", self.country)
-        print("домашня адреса:", self.home_address)
+        print("Назва міста: ", self.name)
+        print("Назва регіону: ", self.region)
+        print("Назва країни: ", self.country)
+        print("Кількість жителів міста: ", self.population)
+        print("Поштовий індекс міста: ", self.postal_code)
+        print("Телефонний код міста: ", self.phone_code)
 
-    def update_data(self, attribute):
-        if attribute == "піб":
-            self.full_name = input("Введіть новий піб: ")
-            print("Інформація оновлена.")
-        elif attribute == "дата народження":
-            self.date_of_birth = input("Введіть нову дату народження: ")
-            print("Інформація оновлена.")
-        elif attribute == "контактний телефон":
-            self.phone_number = input("Введіть новий контактний телефон: ")
-            print("Інформація оновлена.")
-        elif attribute == "місто":
-            self.city = input("Введіть нове місто: ")
-            print("Інформація оновлена.")
-        elif attribute == "країна":
-            self.country = input("Введіть нову країну: ")
-            print("Інформація оновлена.")
-        elif attribute == "домащня адреса":
-            self.home_address = input("Введіть нову домашню адресу: ")
-            print("Інформація оновлена.")
-        else:
-            print("Невірний ввід.")
-
-person = Human("", "", "", "", "", "")
-person.input_data()
-print("\nІнформація про людину:")
-person.display()
-
-while True:
-    information_to_change = input("\nВведіть яку інформацію ви хочете змінити (або 0, якщо нічого): ").lower()
-    if information_to_change == "0":
-        print("Програма завершена :(")
-        break
-
-    person.update_data(information_to_change)
-
-print("\nОновлена інформація: ")
-person.display()
+city1 = City("", "", "", 0, "", "")
+city1.input_data()
+print("\nІнформація про місто: ")
+city1.display()
