@@ -18,7 +18,7 @@ class City:
         self.name = input("Введіть назву міста: ")
         self.region = input("Введіть назву регіону: ")
         self.country = input("Введіть назву країни: ")
-        self.population = input("Введіть кількість жителів у місті: ")
+        self.population = int(input("Введіть кількість жителів у місті: "))
         self.postal_code = input("Введіть поштовий індекс міста: ")
         self.phone_code = input("Введіть телефонний код міста: ")
 
